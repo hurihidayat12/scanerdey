@@ -19,6 +19,10 @@ pipeline {
                 archiveArtifacts artifacts: 'hasil-scan.txt', onlyIfSuccessful: true
             }
         }
+        stage('Parse CVSS') {
+            steps {
+                sh 'python3 parser.py'
     }
 }
-a
+    }
+}
